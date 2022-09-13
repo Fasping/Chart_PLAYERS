@@ -1,0 +1,1 @@
+# some stat bars with animation ( using Vite js for launch // React js and style components ) when loading that shows your stats compared to other players, with buttons that change the range between 7, 30, 90 and 180 days 🦄
