@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div>
-     <p>Chart</p>
+     <h1>Chart</h1>
     </div>
   )
 }
