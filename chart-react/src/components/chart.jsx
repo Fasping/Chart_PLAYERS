@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
-import PercentageBlock from "./percentage-block";
-import Player_Api from "./api-player-mock";
+import PercentageBlock from "./percentage-block.jsx";
+import Player_Api from './api-player-mock.jsx';
 
 
 const ButtonSelectDays = styled.button`
@@ -17,7 +17,7 @@ padding: 12px;
 text-align: center;
 `;
 
-const Chart = styled.p`
+const ChartOne = styled.p`
 padding: 12px 12px 6px 12px;
 `;
 
@@ -65,6 +65,13 @@ export default function Chart() {
                     </ButtonSelectDays>
                 ))}
             </div>
+            <ChartOne>
+                <PercentageBlock 
+                    name={Player}
+                    total={selectedDaysElement.playinDurationavarage}
+                    current={selectedDaysElement.playingDuration}
+                />
+            </ChartOne>
         </div>
     )
 }

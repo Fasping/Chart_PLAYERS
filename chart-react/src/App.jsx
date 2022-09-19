@@ -1,6 +1,5 @@
-import './App.css'
-import './components/api-player-mock.js'
-import Chart from './components/chart.jsx'
+import './components/api-player-mock.jsx'
+import Chart from './components/Chart.jsx'
 
 
 function App() {
@@ -8,7 +7,8 @@ function App() {
 
   return (
     <div>
-     <Chart />
+      <Chart />
+      <h1>Working?</h1>
     </div>
   )
 }
