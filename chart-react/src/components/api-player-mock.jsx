@@ -1,4 +1,4 @@
-const Player_Api = [
+const PlayerApi = [
   {
     default: true,
     duration: "7",
@@ -53,4 +53,4 @@ const Player_Api = [
   },
 ];
 
-export default Player_Api
+export default PlayerApi

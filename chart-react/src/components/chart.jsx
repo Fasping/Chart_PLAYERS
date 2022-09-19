@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import PercentageBlock from "./percentage-block.jsx";
-import Player_Api from './api-player-mock.jsx';
+import PlayerApi from './api-player-mock.jsx';
 
 
 const ButtonSelectDays = styled.button`
@@ -38,7 +38,7 @@ export default function Chart() {
     const [selectedDaysElement, setSelectedDaysElement] = useState({});
 
     useEffect(() => {
-        const defaultData = Player_Api?.find(item => item.default);
+        const defaultData = PlayerApi?.find(item => item.default);
         setSelectedDaysElement(defaultData);
     },[])
 
@@ -47,31 +47,29 @@ export default function Chart() {
     };
 
     return (
+      <div>
+        <TextDescriptionWrapp>
+          <small>Description</small>
+        </TextDescriptionWrapp>
         <div>
-            <TextDescriptionWrapp>
-                <small>Description</small>
-            </TextDescriptionWrapp>
-            <div>
-                {Player_Api.map(item => (
-                    <ButtonSelectDays
-                        key={item.duration}
-                        name={`button-${item.duration}`}
-                        onClick={() => changeDays(item)}
-                        selected={
-                            selectedDaysElement.duration === item.duration
-                        }
-                    >
-                        {item.duration}
-                    </ButtonSelectDays>
-                ))}
-            </div>
-            <ChartOne>
-                <PercentageBlock 
-                    name={Player}
-                    total={selectedDaysElement.playinDurationavarage}
-                    current={selectedDaysElement.playingDuration}
-                />
-            </ChartOne>
+          {PlayerApi.map((item) => (
+            <ButtonSelectDays
+              key={item.duration}
+              name={`button-${item.duration}`}
+              onClick={() => changeDays(item)}
+              selected={selectedDaysElement.duration === item.duration}
+            >
+              {item.duration}
+            </ButtonSelectDays>
+          ))}
         </div>
-    )
+        <ChartOne>
+          <PercentageBlock
+            name={<p>Player</p>}
+            total={selectedDaysElement.playinDurationavarage}
+            current={selectedDaysElement.playingDuration}
+          />
+        </ChartOne>
+      </div>
+    );
 }
