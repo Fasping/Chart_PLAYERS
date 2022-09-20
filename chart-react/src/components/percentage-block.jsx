@@ -1,10 +1,12 @@
 import styled from "styled-components";
+import { charge, showFromDown } from "./animation-chart";
 
 const Container = styled.div`
   width: 100%;
   height: 36px;
   margin-bottom: 12px;
-  background-color: red;
+  animation: ${showFromDown} 2s ease-in-out;
+  background-color: gray;
   display: flex;
   align-items: center;
   position: relative;
@@ -19,7 +21,7 @@ const Container = styled.div`
     left: 0;
     background-color: (${(props) => props.percentage});
     width: ${(props) => props.percentage}%;
-    animation: ${(props) => props.percentage} 1s ease-in-out;
+    animation: ${(props) => charge(props.percentage)} 2s ease-in-out;
     animation-fill-mode: forwards;
   }
 

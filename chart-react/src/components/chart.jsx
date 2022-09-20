@@ -72,22 +72,22 @@ export default function Chart() {
         </div>
         <ChartOne>
           <PercentageBlock
-            name={<p>Playing Duration</p>}
+            name=<p>Playing Duration</p>
             total={selectedDaysElement.playinDurationavarage}
             current={selectedDaysElement.playingDuration}
           />
           <PercentageBlock
-            name={<p>Day Playing</p>}
+            name=<p>Day Playing</p>
             total={selectedDaysElement.daysPlayingAvarage}
             current={selectedDaysElement.daysPlaying}
           />
           <PercentageBlock
-            name={<p>Withdrawn</p>}
+            name=<p>Withdrawn</p>
             total={selectedDaysElement.withdrawnAvarage}
             current={selectedDaysElement.withdrawn}
           />
           <PercentageBlock
-            name={<p>Games Lost</p>}
+            name=<p>Games Lost</p>
             total={selectedDaysElement.depositedAvarage}
             current={selectedDaysElement.deposited}
           />
