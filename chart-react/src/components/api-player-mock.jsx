@@ -10,7 +10,7 @@ const PlayerApi = [
     daysPlaying: 6,
     daysPlayingAvarage: 7,
     playingDuration: 10.5,
-    playingDurationAvarage: 12.2,
+    playingDurationAvarage: 13.2,
   },
   {
     default: false,

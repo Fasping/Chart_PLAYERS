@@ -73,7 +73,7 @@ export default function Chart() {
         <ChartOne>
           <PercentageBlock
             name=<p>Playing Duration</p>
-            total={selectedDaysElement.playinDurationavarage}
+            total={selectedDaysElement.playingDurationAvarage}
             current={selectedDaysElement.playingDuration}
           />
           <PercentageBlock
@@ -91,15 +91,15 @@ export default function Chart() {
             total={selectedDaysElement.depositedAvarage}
             current={selectedDaysElement.deposited}
           />
-            </ChartOne>
-            <div>
-                <InfoFooterDescription>
-                    <InfoFooterDescriptionColorBox color="red" />
-                    <small> Player </small>
-                    <InfoFooterDescriptionColorBox color="grey" margin />
-                    <small>Other players</small>
-                </InfoFooterDescription>
-            </div>
+        </ChartOne>
+        <div>
+          <InfoFooterDescription>
+            <InfoFooterDescriptionColorBox color="greenyellow" />
+            <small> Player </small>
+            <InfoFooterDescriptionColorBox color="grey" margin />
+            <small>Other players</small>
+          </InfoFooterDescription>
+        </div>
       </div>
     );
 }
