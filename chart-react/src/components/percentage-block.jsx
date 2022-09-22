@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { charge, showFromDown } from "./animation-chart";
 
 const Container = styled.div`
-  width: 100%;
   height: 36px;
   margin-bottom: 12px;
   animation: ${showFromDown} 2s ease-in-out;
@@ -11,7 +10,7 @@ const Container = styled.div`
   align-items: center;
   position: relative;
   padding: 12px;
-  border-radius: 3px;
+ 
 
   .bar {
     border-radius: 3px;

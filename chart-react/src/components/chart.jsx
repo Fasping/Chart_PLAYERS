@@ -5,6 +5,7 @@ import PlayerApi from './api-player-mock.jsx';
 
 
 const ButtonSelectDays = styled.button`
+text-align: center;
 width: 73px;
 height: 24px;
 margin: 10px;
@@ -17,8 +18,8 @@ padding: 12px;
 text-align: center;
 `;
 
-const ChartOne = styled.p`
-padding: 12px 12px 6px 12px;
+const ChartOne = styled.div`
+  padding: 12px 12px 6px 12px;
 `;
 
 const InfoFooterDescription = styled.p`
@@ -31,8 +32,8 @@ padding: 6px 12px 12px 12px;
 const InfoFooterDescriptionColorBox = styled.p`
 background: ${props => props.color};
 border-radius: 3px;
-width: 33px;
-height: 23px;
+width: 43px;
+height: 33px;
 left: 12px;
 display: flex;
 align-items: center;
@@ -50,13 +51,20 @@ export default function Chart() {
     },[])
 
     const changeDays = item => {
-        selectedDaysElement(item);
+        setSelectedDaysElement(item);
     };
 
     return (
       <div>
         <TextDescriptionWrapp>
-          <h1>Description</h1>
+          <h4>
+            Some charts that show information from a mock api compared to
+            all the other players in the game,
+          </h4>
+          <h4>
+            and you can also change the buttons between 7, 30, 90 or 180 days to
+            see the comparison between week, month, quarter or 6 months
+          </h4>
         </TextDescriptionWrapp>
         <div>
           {PlayerApi.map((item) => (
@@ -77,7 +85,7 @@ export default function Chart() {
             current={selectedDaysElement.playingDuration}
           />
           <PercentageBlock
-            name=<p>Day Playing</p>
+            name=<p>Days Playing</p>
             total={selectedDaysElement.daysPlayingAvarage}
             current={selectedDaysElement.daysPlaying}
           />
@@ -97,7 +105,7 @@ export default function Chart() {
             <InfoFooterDescriptionColorBox color="greenyellow" />
             <small> Player </small>
             <InfoFooterDescriptionColorBox color="grey" margin />
-            <small>Other players</small>
+            <small> Other players </small>
           </InfoFooterDescription>
         </div>
       </div>
