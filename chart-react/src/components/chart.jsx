@@ -5,12 +5,28 @@ import PlayerApi from './api-player-mock.jsx';
 
 
 const ButtonSelectDays = styled.button`
-text-align: center;
-width: 73px;
-height: 24px;
-margin: 10px;
-border-radius: 26px;
-background: ${props => props.selected ? 'green' : 'yellow'};
+  text-align: center;
+  width: 83px;
+  height: 44px;
+  margin: 10px;
+  background: ${(props) =>
+    props.selected
+      ? "radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(96,8,26,1) 100%);"
+      : "#000a47"};
+
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 3px;
+
+  color: #fff;
+  line-height: 1.15;
+  font-size: 16px;
+  :hover {
+    transition: all 0.1s ease;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 3px #bbff9e;
+  }
 `;
 
 const TextDescriptionWrapp = styled.div`
@@ -111,3 +127,8 @@ export default function Chart() {
       </div>
     );
 }
+
+
+
+                 
+                
